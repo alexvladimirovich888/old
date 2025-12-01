@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Internet</title>
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="favicon/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="modal-container">
+        <div class="site-container">
+            <div class="taskbar">
+        <div class="start-button">Start</div>
+        <div class="taskbar-item active">Internet Explorer - MY HOMEPAGE</div>
+        <div class="taskbar-time">3:42 PM</div>
+    </div>
+
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-text">MY HOMEPAGE - Microsoft Internet Explorer</div>
+            <div class="window-controls">
+                <button class="window-btn">_</button>
+                <button class="window-btn">□</button>
+                <button class="window-btn">×</button>
+            </div>
+        </div>
+        
+        <div class="menu-bar">
+            <span>File</span>
+            <span>Edit</span>
+            <span>View</span>
+            <span>Favorites</span>
+            <span>Tools</span>
+            <span>Help</span>
+            <div class="menu-twitter">
+                <a href="https://x.com" target="_blank" class="twitter-link-menu">
+                    <img src="img/twitter.png" alt="Twitter" class="twitter-icon-menu">
+                    <span>Twitter</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="address-bar">
+            <span>Address:</span>
+            <input type="text" value="http://www.myhomepage.com/index.html" readonly>
+            <button>Go</button>
+        </div>
+
+        <div class="content">
+            <!-- All Content in One Window -->
+            <div class="unified-content">
+                <div class="main-content">
+                    <h1>MY PAGE</h1>
+                <div class="form-window">
+                    <div class="form-title-bar">
+                        <span>About Me</span>
+                    </div>
+                    <div class="form-content">
+                        <table>
+                            <tr>
+                                <td>Name:</td>
+                                <td><input type="text" placeholder="Enter your name" class="input-field"></td>
+                            </tr>
+                            <tr>
+                                <td>Favorite Band:</td>
+                                <td><input type="text" placeholder="e.g. Linkin Park" class="input-field"></td>
+                            </tr>
+                            <tr>
+                                <td>Favorite Emoticon:</td>
+                                <td>
+                                    <select class="select-field">
+                                        <option>:)</option>
+                                        <option>;D</option>
+                                        <option>xD</option>
+                                        <option>:P</option>
+                                        <option>:-)</option>
+                                        <option>8)</option>
+                                        <option>^_^</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Photo:</td>
+                                <td>
+                                    <input type="file" class="file-input">
+                                    <button class="browse-btn">Browse...</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <button class="save-btn" onclick="saveProfile()">[ Save ]</button>
+                        
+                        <div id="save-confirmation" class="save-confirmation" style="display: none;">
+                            <div class="confirmation-window">
+                                <div class="confirmation-title">Profile Saved</div>
+                                <div class="confirmation-content">
+                                    <div class="confirmation-icon">✓</div>
+                                    <div class="confirmation-text">Your profile has been successfully saved!</div>
+                                    <button class="confirmation-ok" onclick="closeSaveConfirmation()">OK</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="visitor-counter">
+                    <div class="counter-window">
+                        <div class="counter-title">You are visitor #</div>
+                        <div class="counter-digits">000,042</div>
+                    </div>
+                </div>
+
+
+
+                <div class="now-playing">
+                    <div class="winamp-window">
+                        <div class="winamp-title">C:\Users\user\Desktop\old\music - Winamp 2.91 - [Stopped]</div>
+                        <div class="winamp-content">
+                            <div class="song-info">
+                                <div class="song-title">01. Linkin Park - In The End.mp3</div>
+                                <div class="song-time">03:36 / 03:36</div>
+                                <div class="song-path">C:\Users\user\Desktop\old\music\</div>
+                            </div>
+                            <div class="winamp-controls">
+                                <button class="winamp-btn" title="Previous">⏮</button>
+                                <button class="winamp-btn" title="Play">▶</button>
+                                <button class="winamp-btn" title="Next">⏭</button>
+                                <button class="winamp-btn" title="Stop">⏹</button>
+                            </div>
+                            <div class="playlist-info">
+                                <div class="playlist-count">7 tracks in playlist</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Block 1 -->
+                <div class="promo-block">
+                    <div class="promo-banner">
+                        <div class="promo-header">🔥 SPONSORED 🔥</div>
+                        <div class="promo-content">
+                            <div class="promo-item">
+                                <img src="img/nokia.jpg" alt="Nokia 3310" class="promo-icon">
+                                <div class="promo-text">
+                                    <strong>NOKIA 3310 - UNBREAKABLE!</strong><br>
+                                    <small>The phone that survives everything! Snake game included!</small><br>
+                                    <a href="#" class="promo-link">BUY NOW $99.99</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- HTML Editor Section -->
+                <div class="content-section">
+                <h1>HTML EDITOR</h1>
+                <div class="editor-window">
+                    <div class="editor-toolbar">
+                        <button class="toolbar-btn" onclick="formatText('bold')">[B]</button>
+                        <button class="toolbar-btn" onclick="formatText('italic')">[I]</button>
+                        <button class="toolbar-btn" onclick="formatText('underline')">[U]</button>
+                    </div>
+                    <textarea id="htmlEditor" class="html-editor" placeholder="Type your HTML here..."></textarea>
+                    <div class="editor-status">Ready</div>
+                </div>
+                </div>
+
+                <!-- Web Ring Section -->
+                <div class="content-section">
+                <h1>WEB RING</h1>
+                <div class="webring-window">
+                    <div class="webring-header">
+                        <span>Cool Sites Ring - Member #42</span>
+                    </div>
+                    <div class="webring-content">
+                        <p>This site is part of the "Awesome Homepages" WebRing!</p>
+                        <div class="webring-navigation">
+                            <button onclick="navigateWebRing('prev')">[<< Previous]</button>
+                            <button onclick="navigateWebRing('random')">[Random]</button>
+                            <button onclick="navigateWebRing('next')">[Next >>]</button>
+                        </div>
+                        <div class="webring-sites">
+                            <div class="webring-site">
+                                <strong>TechGuru99's Page</strong><br>
+                                <small>Last updated: 3/12/2004</small>
+                            </div>
+                            <div class="webring-site">
+                                <strong>AnimeFreak2000</strong><br>
+                                <small>Last updated: 3/10/2004</small>
+                            </div>
+                            <div class="webring-site">
+                                <strong>MusicDownloads4U</strong><br>
+                                <small>Last updated: 3/08/2004</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Downloads Section -->
+                <div class="content-section">
+                <h1>DOWNLOADS</h1>
+                <div class="downloads-window">
+                    <div class="download-warning">
+                        <div class="warning-title">⚠️ DOWNLOAD WARNING ⚠️</div>
+                        <div>Always scan files with Norton AntiVirus before opening!</div>
+                    </div>
+                    
+                    <div class="download-categories">
+                        <div class="download-category">
+                            <h3>🎵 MUSIC (MP3)</h3>
+                            <div class="download-item">
+                                <span class="file-icon">♪</span>
+                                <span class="file-name">Linkin_Park-Meteora.zip</span>
+                                <span class="file-size">(45.2 MB)</span>
+                                <button class="download-btn" onclick="startDownload('music')">Download</button>
+                            </div>
+                            <div class="download-item">
+                                <span class="file-icon">♪</span>
+                                <span class="file-name">Eminem-8Mile_Soundtrack.zip</span>
+                                <span class="file-size">(52.1 MB)</span>
+                                <button class="download-btn" onclick="startDownload('music')">Download</button>
+                            </div>
+                        </div>
+
+                        <div class="download-category">
+                            <h3>🎮 GAMES</h3>
+                            <div class="download-item">
+                                <span class="file-icon">🎮</span>
+                                <span class="file-name">CS_1.6_Maps_Pack.exe</span>
+                                <span class="file-size">(128 MB)</span>
+                                <button class="download-btn" onclick="startDownload('games')">Download</button>
+                            </div>
+                            <div class="download-item">
+                                <span class="file-icon">🎮</span>
+                                <span class="file-name">GTA_Vice_City_Trainer.exe</span>
+                                <span class="file-size">(2.1 MB)</span>
+                                <button class="download-btn" onclick="startDownload('games')">Download</button>
+                            </div>
+                        </div>
+
+                        <div class="download-category">
+                            <h3>💻 SOFTWARE</h3>
+                            <div class="download-item">
+                                <span class="file-icon">💿</span>
+                                <span class="file-name">WinRAR_3.30.exe</span>
+                                <span class="file-size">(1.2 MB)</span>
+                                <button class="download-btn" onclick="startDownload('software')">Download</button>
+                            </div>
+                            <div class="download-item">
+                                <span class="file-icon">💿</span>
+                                <span class="file-name">Mozilla_Firefox_0.8.exe</span>
+                                <span class="file-size">(7.8 MB)</span>
+                                <button class="download-btn" onclick="startDownload('software')">Download</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="download-progress" class="download-progress" style="display: none;">
+                        <div class="progress-title">Downloading...</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <div class="progress-text">0% - Connecting to server...</div>
+                    </div>
+                </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+                
+                <div class="center-content">
+                    <!-- Center Content -->
+                    <!-- Mini Games Section -->
+                    <div class="content-section">
+                    <h1>MINI GAMES</h1>
+                    
+                    <div class="game-list">
+                        <div class="game-item">
+                            <h3>Click the Pop-up!</h3>
+                            <button onclick="startPopupGame()">[ Start Game ]</button>
+                            <div id="popup-score">Score: 0</div>
+                        </div>
+                        
+                        <div class="game-item">
+                            <h3>Catch 10 Viruses</h3>
+                            <button onclick="startVirusGame()">[ Start Game ]</button>
+                            <div id="virus-score">Viruses Caught: 0/10</div>
+                        </div>
+                        
+                        <div class="game-item">
+                            <h3>Upgrade Your Pentium III</h3>
+                            <button onclick="showUpgradeShop()">[ Open Shop ]</button>
+                            <div id="upgrade-money">Money: $500</div>
+                        </div>
+                    </div>
+
+                    <div id="game-area" class="game-area"></div>
+                    </div>
+
+                    <!-- ICQ Chat Section -->
+                    <div class="content-section">
+                    <h1>ICQ CHAT</h1>
+                    <div class="chat-window">
+                        <div class="chat-header">
+                            <span>Contact List</span>
+                            <div class="online-status">
+                                <span class="status-indicator online"></span> 3 online
+                            </div>
+                        </div>
+                        
+                        <div class="chat-contacts">
+                            <div class="contact">
+                                <span class="status-indicator online"></span>
+                                <span>CoolGuy2004</span>
+                            </div>
+                            <div class="contact">
+                                <span class="status-indicator online"></span>
+                                <span>AngelGirl99</span>
+                            </div>
+                            <div class="contact">
+                                <span class="status-indicator offline"></span>
+                                <span>HackerDude</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="message">
+                                <span class="username">CoolGuy2004:</span>
+                                <span class="text">Hey! Do you have ICQ?</span>
+                            </div>
+                            <div class="message">
+                                <span class="username">AngelGirl99:</span>
+                                <span class="text">Set your status!</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-input">
+                            <input type="text" id="chatInput" placeholder="Type message...">
+                            <button onclick="sendMessage()">Send</button>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Content Block - Flash Sale -->
+                    <div class="promo-block">
+                        <div class="promo-banner flash-banner">
+                            <div class="promo-header">⚡ FLASH SALE ⚡</div>
+                            <div class="promo-content">
+                                <div class="promo-item">
+                                    <img src="img/usbflash.jpg" alt="USB Flash Drive" class="promo-icon">
+                                    <div class="promo-text">
+                                        <strong>128MB USB FLASH DRIVE</strong><br>
+                                        <small>Store HUNDREDS of MP3s! Compatible with Windows 98/XP!</small><br>
+                                        <span class="price-old">$299.99</span> <span class="price-new">$149.99</span><br>
+                                        <a href="#" class="promo-link blink">ORDER TODAY!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Block - AOL -->
+                    <div class="promo-block">
+                        <div class="promo-banner dialup-ad">
+                            <div class="promo-header">📞 INTERNET ACCESS 📞</div>
+                            <div class="promo-content">
+                                <div class="promo-item">
+                                    <strong>AOL DIAL-UP INTERNET</strong><br>
+                                    <small>1000 FREE HOURS! CD included with setup!</small><br>
+                                    <div class="dialup-features">
+                                        <div>✓ Email Account</div>
+                                        <div>✓ Instant Messenger</div>
+                                        <div>✓ Web Browser</div>
+                                    </div>
+                                    <a href="#" class="promo-link">CALL 1-800-AOL-FREE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cool Links Section -->
+                    <div class="content-section">
+                    <h1>COOL LINKS</h1>
+                    <div class="links-window">
+                        <div class="link-category">
+                            <h3>🌐 SEARCH ENGINES</h3>
+                            <div class="link-item">
+                                <a href="#">Google.com</a> - The best search engine!
+                            </div>
+                            <div class="link-item">
+                                <a href="#">Yahoo.com</a> - Portal with everything!
+                            </div>
+                            <div class="link-item">
+                                <a href="#">AltaVista.com</a> - Advanced search features!
+                            </div>
+                        </div>
+
+                        <div class="link-category">
+                            <h3>💬 CHAT & MESSAGING</h3>
+                            <div class="link-item">
+                                <a href="#">ICQ.com</a> - Download ICQ 2003b!
+                            </div>
+                            <div class="link-item">
+                                <a href="#">MSN Messenger</a> - Chat with friends!
+                            </div>
+                            <div class="link-item">
+                                <a href="#">AIM.com</a> - AOL Instant Messenger!
+                            </div>
+                        </div>
+
+                        <div class="link-category">
+                            <h3>🎵 MUSIC & ENTERTAINMENT</h3>
+                            <div class="link-item">
+                                <a href="#">Winamp.com</a> - It really whips the llama's ass!
+                            </div>
+                            <div class="link-item">
+                                <a href="#">MTV.com</a> - Music television online!
+                            </div>
+                            <div class="link-item">
+                                <a href="#">RealPlayer.com</a> - Streaming media player!
+                            </div>
+                        </div>
+
+                        <div class="link-category">
+                            <h3>🏠 HOMEPAGE BUILDERS</h3>
+                            <div class="link-item">
+                                <a href="#">GeoCities.com</a> - FREE homepage hosting!
+                            </div>
+                            <div class="link-item">
+                                <a href="#">Angelfire.com</a> - Build your site today!
+                            </div>
+                            <div class="link-item">
+                                <a href="#">Tripod.com</a> - Easy website creation!
+                            </div>
+                        </div>
+
+                        <div class="blink-text">
+                            <marquee>*** CHECK OUT THESE AWESOME SITES! *** NEW LINKS ADDED WEEKLY! ***</marquee>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="sidebar-content">
+                    <!-- Sidebar Content -->
+                    <div class="sidebar-promos">
+                        <div class="promo-skyscraper">
+                            <div class="promo-title">💿 CD BURNING SOFTWARE 💿</div>
+                            <div class="promo-body">
+                                <strong>NERO Burning ROM 6.0</strong><br>
+                                Burn CDs like a PRO!<br>
+                                <small>Now supports DVD burning!</small><br>
+                                <a href="#" class="promo-link">Download Trial</a>
+                            </div>
+                        </div>
+                        
+                        <div class="promo-skyscraper">
+                            <div class="promo-title">🎮 GAME OF THE YEAR 🎮</div>
+                            <div class="promo-body">
+                                <strong>HALF-LIFE 2</strong><br>
+                                Revolutionary physics!<br>
+                                <small>Requires Steam account</small><br>
+                                <a href="#" class="promo-link">Pre-Order Now!</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                <!-- Content Block 3 -->
+                <div class="promo-block">
+                    <div class="promo-banner popup-blocker-ad">
+                        <div class="promo-header">🛡️ PROTECT YOUR PC! 🛡️</div>
+                        <div class="promo-content">
+                            <div class="promo-item">
+                                <strong>NORTON ANTIVIRUS 2004</strong><br>
+                                <small>Stop viruses, trojans & spyware! Auto-updates!</small><br>
+                                <div class="security-badges">
+                                    <span class="badge">✓ TRUSTED</span>
+                                    <span class="badge">✓ SECURE</span>
+                                </div>
+                                <a href="#" class="promo-link security-link">GET PROTECTION NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guestbook Section -->
+                <div class="content-section">
+                <h1>GUESTBOOK</h1>
+                
+                <div class="guestbook-form">
+                    <div class="form-title-bar">
+                        <span>Sign My Guestbook</span>
+                    </div>
+                    <div class="form-content">
+                        <table>
+                            <tr>
+                                <td>Name:</td>
+                                <td><input type="text" id="guestName" class="input-field"></td>
+                            </tr>
+                            <tr>
+                                <td>Message:</td>
+                                <td><textarea id="guestMessage" class="message-area"></textarea></td>
+                            </tr>
+                        </table>
+                        <button onclick="addGuestbookEntry()">[ Add Message ]</button>
+                    </div>
+                </div>
+
+                <div class="guestbook-entries" id="guestbookEntries">
+                    <div class="entry">
+                        <div class="entry-header">
+                            <strong>WebMaster2004</strong> - 03/15/2004 2:14 PM
+                        </div>
+                        <div class="entry-message">
+                            Hey! Cool site! Check out mine too!
+                        </div>
+                    </div>
+                    
+                    <div class="entry">
+                        <div class="entry-header">
+                            <strong>MusicLover</strong> - 03/14/2004 7:23 PM
+                        </div>
+                        <div class="entry-message">
+                            LOL, I'm also downloading Winamp 2.91! Your site rocks!
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- MSN Messenger Status -->
+                <div class="content-section">
+                <h1>MSN STATUS</h1>
+                <div class="msn-window">
+                    <div class="msn-header">
+                        <span>Windows Messenger</span>
+                        <div class="msn-status">
+                            <span class="status-indicator online"></span> Online
+                        </div>
+                    </div>
+                    <div class="msn-content">
+                        <div class="msn-user">
+                            <strong>xX_Cool_User_2004_Xx</strong><br>
+                            <small>Status: Listening to Linkin Park</small>
+                        </div>
+                        <div class="msn-contacts">
+                            <div class="msn-contact">
+                                <span class="status-indicator online"></span> AwesomeGamer123
+                            </div>
+                            <div class="msn-contact">
+                                <span class="status-indicator away"></span> MusicFan2004
+                            </div>
+                            <div class="msn-contact">
+                                <span class="status-indicator offline"></span> SkaterBoy99
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Under Construction -->
+                <div class="content-section">
+                <h1>🚧 UNDER CONSTRUCTION 🚧</h1>
+                <div class="construction-window">
+                    <div class="construction-content">
+                        <div class="blink-text">
+                            <strong>COMING SOON:</strong>
+                        </div>
+                        <ul>
+                            <li>📸 Photo Gallery</li>
+                            <li>🎵 MP3 Collection</li>
+                            <li>💬 Forum</li>
+                            <li>📊 Web Stats</li>
+                        </ul>
+                        <div class="construction-gif">
+                            <marquee>🚧 Please check back soon! 🚧</marquee>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Hit Counter -->
+                <div class="content-section">
+                <h1>WEB STATS</h1>
+                <div class="stats-window">
+                    <div class="stat-item">
+                        <strong>Total Hits:</strong> 42,069
+                    </div>
+                    <div class="stat-item">
+                        <strong>Today:</strong> 127
+                    </div>
+                    <div class="stat-item">
+                        <strong>Online Now:</strong> 3
+                    </div>
+                    <div class="stat-item">
+                        <strong>Best Browser:</strong> IE 6.0
+                    </div>
+                    <div class="stat-item">
+                        <strong>Site Since:</strong> March 2004
+                    </div>
+                </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Final Content Block -->
+                    <div class="promo-block">
+                        <div class="promo-banner bottom-banner">
+                            <div class="promo-header">🎵 MUSIC DOWNLOADS 🎵</div>
+                            <div class="promo-content">
+                                <div class="promo-item">
+                                    <strong>KAZAA LITE++ FREE!</strong><br>
+                                    <small>Download unlimited MP3s, movies & software!</small><br>
+                                    <div class="warning-text">*No spyware or adware!</div>
+                                    <a href="#" class="promo-link download-link">DOWNLOAD NOW - 2.1MB</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>Done</span>
+            <span>Internet Zone</span>
+        </div>
+    </div>
+
+            <div class="footer">
+                © 2004 My Homepage | Made in Notepad
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
